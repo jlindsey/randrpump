@@ -1,0 +1,9 @@
+{
+  "name": "rnr",
+  "version": "1.0.0",
+  "private": true,
+  "license": "private",
+  "dependencies": {
+    "connect": "~2.7.9"
+  }
+}
