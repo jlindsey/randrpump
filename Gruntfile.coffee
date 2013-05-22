@@ -52,10 +52,32 @@ module.exports = (grunt) ->
           expand: true
         ]
 
+    develop:
+      server:
+        file: 'server.js'
+
+    reload:
+      port: 3000
+      proxy:
+        host: 'localhost'
+        port: 3001
+
+    watch:
+      haml:
+        files: ['src/haml/*.haml']
+        tasks: ['haml', 'reload']
+      css:
+        files: ['src/css/*.css']
+        tasks: ['concat', 'cssmin', 'reload']
+
   grunt.loadNpmTasks 'grunt-contrib-clean'
   grunt.loadNpmTasks 'grunt-contrib-copy'
   grunt.loadNpmTasks 'grunt-contrib-concat'
   grunt.loadNpmTasks 'grunt-haml'
   grunt.loadNpmTasks 'grunt-contrib-cssmin'
+  grunt.loadNpmTasks 'grunt-develop'
+  grunt.loadNpmTasks 'grunt-contrib-watch'
+  grunt.loadNpmTasks 'grunt-reload'
 
   grunt.registerTask 'default', ['clean', 'copy', 'concat', 'cssmin', 'haml']
+  grunt.registerTask 'dev', ['default', 'develop', 'reload', 'watch']
