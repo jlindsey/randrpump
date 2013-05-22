@@ -5,5 +5,13 @@
   "license": "private",
   "dependencies": {
     "connect": "~2.7.9"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-clean": "~0.4.1",
+    "grunt-contrib-cssmin": "~0.6.0",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-haml": "~0.4.0"
   }
 }
