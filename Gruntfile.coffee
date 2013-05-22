@@ -26,7 +26,7 @@ module.exports = (grunt) ->
         separator: '\n'
       css:
         src: [
-          'src/css/bootstrap.min.css',
+          'src/css/bootstrap.min.css'
           'src/css/bootstrap-responsive.min.css'
           'src/css/screen.css'
         ]
@@ -56,6 +56,9 @@ module.exports = (grunt) ->
         port: 3001
 
     watch:
+      jade:
+        files: ['src/jade/*.jade']
+        tasks: ['jade', 'reload']
       css:
         files: ['src/css/*.css']
         tasks: ['concat', 'cssmin', 'reload']
