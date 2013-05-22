@@ -28,6 +28,16 @@ body > .container {
   border-left: 1px solid #CCC;
 }
 
+img.watermark {
+  position: absolute;
+  top: 120px;
+  right: 250px;
+  z-index: 1000;
+
+  opacity: 0.1;
+  filter: alpha(opacity=10);
+}
+
 /* Main marketing message */
 
 
@@ -90,6 +100,8 @@ body > .container {
 
 /* Wrapper for page content to push down footer */
 #wrap {
+  position: relative;
+  z-index: 2000;
   min-height: 100%;
   height: 100%;
   height: auto !important;
