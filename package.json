@@ -20,8 +20,8 @@
     "grunt-contrib-copy": "~0.4.1",
     "grunt-contrib-concat": "~0.3.0",
     "grunt-contrib-watch": "~0.4.3",
-    "grunt-haml": "~0.4.0",
     "grunt-develop": "0.0.2",
-    "grunt-reload": "git://github.com/webxl/grunt-reload.git"
+    "grunt-reload": "git://github.com/webxl/grunt-reload.git",
+    "grunt-contrib-jade": "~0.6.0"
   }
 }

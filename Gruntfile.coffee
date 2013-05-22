@@ -40,17 +40,10 @@ module.exports = (grunt) ->
         files:
           'public/screen.min.css': ['public/screen.css']
 
-    haml:
-      options:
-        rubyHamlCommand: 'haml -t ugly -f html5'
+    jade:
       site:
-        files: [
-          src: ['src/haml/*.haml']
-          dest: 'public/'
-          ext: '.html'
-          flatten: true
-          expand: true
-        ]
+        files:
+          'public/index.html': 'src/jade/index.jade'
 
     develop:
       server:
@@ -63,9 +56,6 @@ module.exports = (grunt) ->
         port: 3001
 
     watch:
-      haml:
-        files: ['src/haml/*.haml']
-        tasks: ['haml', 'reload']
       css:
         files: ['src/css/*.css']
         tasks: ['concat', 'cssmin', 'reload']
@@ -73,11 +63,11 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-clean'
   grunt.loadNpmTasks 'grunt-contrib-copy'
   grunt.loadNpmTasks 'grunt-contrib-concat'
-  grunt.loadNpmTasks 'grunt-haml'
+  grunt.loadNpmTasks 'grunt-contrib-jade'
   grunt.loadNpmTasks 'grunt-contrib-cssmin'
   grunt.loadNpmTasks 'grunt-develop'
   grunt.loadNpmTasks 'grunt-contrib-watch'
   grunt.loadNpmTasks 'grunt-reload'
 
-  grunt.registerTask 'default', ['clean', 'copy', 'concat', 'cssmin', 'haml']
+  grunt.registerTask 'default', ['clean', 'copy', 'concat', 'cssmin', 'jade']
   grunt.registerTask 'dev', ['default', 'develop', 'reload', 'watch']
