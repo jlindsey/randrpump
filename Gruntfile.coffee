@@ -28,7 +28,9 @@ module.exports = (grunt) ->
         src: [
           'src/css/bootstrap.min.css'
           'src/css/bootstrap-responsive.min.css'
-          'src/css/screen.css'
+          'src/css/common-screen.css'
+          'src/css/desktop-screen.css'
+          'src/css/mobile-screen.css'
         ]
         dest: 'public/screen.css'
 
