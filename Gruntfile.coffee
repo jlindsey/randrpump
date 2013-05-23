@@ -44,6 +44,9 @@ module.exports = (grunt) ->
       site:
         files:
           'public/index.html': 'src/jade/index.jade'
+          'public/about.html': 'src/jade/about.jade'
+          'public/services.html': 'src/jade/services.jade'
+          'public/contact.html': 'src/jade/contact.jade'
 
     develop:
       server:
