@@ -20,14 +20,18 @@ html(lang="en")
             .navbar-inner
               .container
                 ul.nav
-                  li.active
-                    a(href="/index.html") Home
-                  li
-                    a(href="/about.html") About Us
-                  li
-                    a(href="/services.html") Services
-                  li
-                    a(href="/contact.html") Contact
+                  block nav-home
+                    li
+                      a(href="/") Home
+                  block nav-about
+                    li
+                      a(href="/about.html") About Us
+                  block nav-services
+                    li
+                      a(href="/services.html") Services
+                  block nav-contact
+                    li
+                      a(href="/contact.html") Contact
 
         block content
 
