@@ -2,8 +2,8 @@ var connect = require('connect');
 
 var port = process.env['PORT'] || 3001;
 var setHeaders = function(req, res, next) {
-  res.setHeader("Cache-Control", "public, max-age=345600"); // 4 days
-  res.setHeader("Expires", new Date(Date.now() + 345600000).toUTCString());
+  res.setHeader("Cache-Control", "public, max-age=604800"); // 1 week
+  res.setHeader("Expires", new Date(Date.now() + 604800000).toUTCString());
   return next();
 };
 var app = connect().
