@@ -1,16 +1,19 @@
-@media only screen and (min-device-width: 1224px) {
-  html, 
-  body {
-    position: static;
+@media only screen and (min-device-width: 1024px) {
+  html {
+    height: 100% !important;
     min-height: 100%;
-    height: 100%;
-    height: auto !important;
+    background-attachment: fixed;
     margin: 0;
     padding: 0;
-  }
+  } 
 
   body {
-    background: rgb(254,255,255);
+    min-height: 100%;
+    height: 100% ;
+    margin: 0;
+    padding: 0;
+
+    background-repeat: no-repeat;
     background: -moz-linear-gradient(top,  rgba(254,255,255,1) 0%, rgba(254,255,255,0.89) 20%, rgba(221,241,249,0.81) 35%, rgba(160,216,239,0.47) 100%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(254,255,255,1)), color-stop(20%,rgba(254,255,255,0.89)), color-stop(35%,rgba(221,241,249,0.81)), color-stop(100%,rgba(160,216,239,0.47)));
     background: -webkit-linear-gradient(top,  rgba(254,255,255,1) 0%,rgba(254,255,255,0.89) 20%,rgba(221,241,249,0.81) 35%,rgba(160,216,239,0.47) 100%);
@@ -18,24 +21,24 @@
     background: -ms-linear-gradient(top,  rgba(254,255,255,1) 0%,rgba(254,255,255,0.89) 20%,rgba(221,241,249,0.81) 35%,rgba(160,216,239,0.47) 100%);
     background: linear-gradient(to bottom,  rgba(254,255,255,1) 0%,rgba(254,255,255,0.89) 20%,rgba(221,241,249,0.81) 35%,rgba(160,216,239,0.47) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffff', endColorstr='#78a0d8ef',GradientType=0 );
+    background-attachment: fixed;
   }
 
   /* Custom container */
   body > .container {
-    height: 100%;
+    margin: auto;
+    height: 100% !important;
+    min-height: 100%;
     max-width: 1000px;
-    background-color: white;
-    border-right: 1px solid #CCC;
-    border-left: 1px solid #CCC;
   }
 
   /* Wrapper for page content to push down footer */
   #wrap {
-    position: relative;
+    background-color: white;
+    border-right: 1px solid #CCC;
+    border-left: 1px solid #CCC;
     z-index: 2000;
     min-height: 100%;
-    height: 100%;
-    height: auto !important;
     padding: 0 15px;
     /* Negative indent footer by it's height */
     margin: 0 auto -60px;
@@ -43,12 +46,18 @@
 
   img.watermark {
     position: absolute;
-    top: 120px;
-    right: 250px;
+    margin:0;
+    padding:0;
+    top: 175px;
+    right: 15%;
     z-index: 1000;
 
     opacity: 0.07;
     filter: alpha(opacity=10);
+  }
+
+  hr.dark {
+    border-top: 1px solid rgb(120,120,120);
   }
 
   .masthead {
@@ -83,23 +92,53 @@
   }
 
   .jumbotron {
-  padding: 30px 0;
-  text-align: center;
+    padding: 30px 0;
+    text-align: center;
+  }
+  .jumbotron h1, h2 {
+    font-family: Georgia,serif;
+    line-height: 1;
   }
   .jumbotron h1 {
     font-size: 100px;
-    line-height: 1;
+  }
+  .jumbotron h2 {
+    font-size: 70px;
+  }
+  .jumbotron h3 {
+    font-size: 50px;
+  }
+  .jumbotron h1 small {
+    padding: 0 25px;
+    color: inherit;
+    font-size: 70px;
   }
   .jumbotron .lead {
     font-size: 24px;
     line-height: 1.25;
   }
-  .jumbotron h2 {
-    font-size: 50px;
-    line-height: 1;
+
+  .jumbotron-mini {
+    padding: 30px 0;
+    text-align: center;
   }
 
+  .jumbotron-mini .lead {
+    font-size: 20px;
+    line-height: 1.25;
+    margin-bottom: 0;
+  }
 
+  p.lead.question {
+    margin-top: 15px;
+    margin-bottom: 0;
+    text-decoration: underline;
+    font-style: italic;
+  }
+
+  iframe {
+    border: 1px solid black;
+  }
 
   /* Set the fixed height of the footer here */
   #push,
@@ -107,6 +146,8 @@
     height: 60px;
   }
   #footer {
+    border-right: 1px solid #CCC;
+    border-left: 1px solid #CCC;
     background-color: #f5f5f5;
   }
 

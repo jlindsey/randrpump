@@ -11,8 +11,8 @@ html(lang="en")
     link(type="text/css", rel="stylesheet", media="screen", href="screen.css")
 
   body
+    img.watermark(src="img/windmill.png")
     .container
-      img.watermark(src="img/windmill.png")
       #wrap
 
         .masthead
@@ -29,6 +29,9 @@ html(lang="en")
                   block nav-services
                     li
                       a(href="/services.html") Services
+                  block nav-faq
+                    li
+                      a(href="/faq.html") FAQ
                   block nav-contact
                     li
                       a(href="/contact.html") Contact
@@ -37,9 +40,9 @@ html(lang="en")
 
         #push
 
-      #footer
+      #footer()
         .container
           p.credit
             | Copyright © 2013 
             span.mirror R
-            |  &amp; R Pump Service. All rights reserved.
+            |  &amp; R Pump Service. All rights reserved. Site design by Joshua Lindsey.
