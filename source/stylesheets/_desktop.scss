@@ -5,7 +5,7 @@
     background-attachment: fixed;
     margin: 0;
     padding: 0;
-  } 
+  }
 
   body {
     min-height: 100%;
@@ -99,6 +99,7 @@
     padding: 30px 0;
     text-align: center;
   }
+
   .jumbotron h1, h2 {
     font-family: Georgia,serif;
     line-height: 1;
@@ -142,6 +143,11 @@
 
   iframe {
     border: 1px solid black;
+  }
+
+  .not-found {
+      margin-top: 15vh;
+      text-align: center;
   }
 
   /* Set the fixed height of the footer here */
