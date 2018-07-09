@@ -11,3 +11,6 @@ deploy:
   skip_cleanup: true
   region: us-east-1
   local_dir: build
+notifications:
+  slack:
+    secure: d7qarAbbCWJO8Y3AoJGs/L60dO3BYUc/1q6ugDhM5Mpo2Kq0kv9orDeDlml6c1NsNNA1irLRiq9dyDsAsLM8NxqVZ+WB1B/CQFdHyjxH0fYmzEiMxH/imK8TafjefSBz9gz5+WtDO+tlRb2hsJmTbAwFbk4h3H3BEI9g50/VfI8=
