@@ -1,0 +1,13 @@
+language: ruby
+rvm:
+- 2.0.0
+env:
+  global:
+  - secure: FMLm8th9arjF4KKy6TzkQLX3ForFJrDHFDmqMwsP5PQV3ml6NtLFimLbLpCotLbCpKQvb8pF/dLxySmH0KxXSTJ+RnbqR3ye2lE7C3TpvvjSPwq1dNZRm5BIIwU1f0youcYVVE2qG7jbEYJI19LRmFAs2wZCU+b6PXfbUVyHtqU=
+  - secure: e+g5U7Fw3/AiK6OCt28tDpUKsIGUWSC3pbrmLeb/zgk4uPr6dAdpxeCyy/C+L8T4jtzkYfX6ahtJiVEoH1v72SOUwbPJxVehjyaNtP+ekq5YEUNTVxtysNZxMFs0HhrRhUko7kjdx2OB1u/F8ohUL1YX8UqceoN14gcSuqn/r2o=
+deploy:
+  provider: s3
+  bucket: www.randrpump.com
+  skip_cleanup: true
+  region: us-east-1
+  local_dir: build
