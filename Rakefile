@@ -13,7 +13,7 @@ task :build do
 end
 
 desc 'Deploy the site to S3'
-task deploy: [:clean, :build] do
+task deploy: %i[clean build] do
   files = FileList.new(File.join(BUILD_DIR, '**', '*')) do |fl|
     fl.exclude { |f| File.directory? f }
   end
